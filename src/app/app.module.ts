@@ -16,6 +16,7 @@ import { PainelModule } from './painel/painel.module';
 import { FooterComponent } from './template/footer/footer.component';
 import { HeaderComponent } from './template/header/header.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
+import { SearchComponent } from './components/home/search/search.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { CarouselComponent } from './components/home/carousel/carousel.component
     ContatoComponent,
     LoginComponent,
     CarouselComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, PainelModule, FormsModule],
   providers: [AuthService],

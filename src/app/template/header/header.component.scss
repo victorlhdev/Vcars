@@ -1,3 +1,5 @@
+@import "../../app.component.scss";
+
 .navbar {
   height: 150px;
 }
@@ -12,21 +14,21 @@
 
 .enter {
   font-size: 2.8rem;
-  color: #0076A7;
+  color: var(--color01);
 }
 
 .enter:hover {
-  color: #00a1e6;
+  color: var(--color02);
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: var(--color04);
   font-size: 1.4rem;
   text-align: center;
 }
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
-  color: #00a1e6;
+  color: var(--color02);
 }
 
 .img-canvas {
@@ -35,16 +37,10 @@
 }
 
 .esc {
- color: #fff;
- font-size: 1.8rem;
+  color: var(--color04);
+  font-size: 1.8rem;
 }
 
 .esc:hover {
-  color: #00a1e6;
+  color: var(--color02);
 }
-
-
-
-
-
-
