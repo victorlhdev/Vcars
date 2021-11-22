@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { PainelModule } from './painel/painel.module';
 import { FooterComponent } from './template/footer/footer.component';
 import { HeaderComponent } from './template/header/header.component';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { HeaderComponent } from './template/header/header.component';
     TrabalheConoscoComponent,
     ContatoComponent,
     LoginComponent,
+    CarouselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, PainelModule, FormsModule],
   providers: [AuthService],
