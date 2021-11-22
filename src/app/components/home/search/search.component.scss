@@ -21,22 +21,66 @@ h3 {
   color: var(--color01);
 }
 
+.form-select, .form-control{
+  border-color: var(--color01);
+}
+
+.form-select:focus-within, .form-control:focus-within, .btn-localizar:focus-within {
+ box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
 .btn-localizar {
 background-color: var(--color05);
 color: var(--color01);
+font-weight: 500;
 height: 50px;
 width: 150px;
 }
 
-.forms {
-  height: 500px;
+.btn-localizar:hover {
+  opacity: 0.9;
+}
+
+.btn-loc {
+  padding-top: 24.19px;
 }
 
 p {
   font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color02);
+  margin: 0;
+  padding-bottom: 5px;
 }
 
-input {
-  vertical-align: text-bottom;
+.modelo {
+  padding-top: 24.19px;
+}
+
+input, select {
+  height: 50px;
+}
+
+.catinfo {
+  color: var(--color01);
+}
+
+img {
+ padding: 10px;
+}
+
+.cat {
+  transition: ease-out all .2s;
+  filter: grayscale(50%);
+}
+
+.cat:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: none;
+}
+
+.center {
+  height: 65px;
 }
 

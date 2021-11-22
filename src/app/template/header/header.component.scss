@@ -4,6 +4,14 @@
   height: 150px;
 }
 
+img {
+  filter: grayscale(40%);
+}
+
+img:hover {
+  filter: none;
+}
+
 .offcanvas {
   background-color: #205f87e5;
 }
