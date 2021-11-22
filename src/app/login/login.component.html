@@ -1,0 +1,13 @@
+<div class="container-fluid login">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"></label>
+      <input [(ngModel)]="usuario.nome" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuário">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"></label>
+      <input [(ngModel)]="usuario.senha" name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+    </div>
+    <button type="submit" class="btn btn-primary mb-3" (click)="fazerLogin()">Login</button>
+  </form>
+</div>

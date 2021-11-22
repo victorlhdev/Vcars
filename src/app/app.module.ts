@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,9 +10,12 @@ import { HomeComponent } from './components/home/home.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { TrabalheConoscoComponent } from './components/trabalhe-conosco/trabalhe-conosco.component';
+import { AuthService } from './login/auth.service';
+import { LoginComponent } from './login/login.component';
 import { PainelModule } from './painel/painel.module';
 import { FooterComponent } from './template/footer/footer.component';
 import { HeaderComponent } from './template/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +28,10 @@ import { HeaderComponent } from './template/header/header.component';
     NoticiasComponent,
     TrabalheConoscoComponent,
     ContatoComponent,
+    LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, PainelModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, PainelModule, FormsModule],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
