@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CarrosService } from './../carros.service';
+import { ICarro } from './../ICarro.model';
+
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.scss'],
 })
 export class ListarComponent implements OnInit {
-  listaCarros: any[] = [
-    {
-      id: 1,
-      marca: 'Fiat',
-      modelo: 'Punto',
-      versao: 'Attractive',
-      ano: 2011,
-      km: 48.0,
-      preco: 35000,
-    },
-  ];
+  listaCarros: ICarro[] = [];
 
-  constructor() {}
+  constructor(private CarrosService: CarrosService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.carregarCarros();
+  }
+
+  carregarCarros(): void {
+    this.CarrosService.buscarTodos().subscribe(retorno =>{
+      this.listaCarros = retorno;
+    });
+  }
 }
