@@ -14,10 +14,10 @@ export class AuthService {
   fazerLogin(Usuario: Usuario): void {
     if (Usuario.nome === 'victorlh' && Usuario.senha === '180295') {
       this.usuarioAutenticado = true;
-      this.router.navigate(['painel']);
+      this.router.navigate(['painel/listar']);
     } else {
       this.usuarioAutenticado = false;
-      
+
     }
   }
 }

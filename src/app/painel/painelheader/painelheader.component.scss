@@ -1,0 +1,10 @@
+@import '../../app.component.scss';
+
+.painel{
+  background-color: var(--color01);
+  h3 {
+    padding: 5px;
+    color: #fff;
+    font-weight: 300;
+  }
+}
