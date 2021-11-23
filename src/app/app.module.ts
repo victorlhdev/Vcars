@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +44,7 @@ import { HeaderComponent } from './template/header/header.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

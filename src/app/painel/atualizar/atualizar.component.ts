@@ -37,7 +37,7 @@ export class AtualizarComponent implements OnInit {
       this.carro = retorno;
       this.CarrosServicece.exibirMensagem(
         'SISTEMA',
-        `${this.carro.modelo} foi atualizado com sucesso.`,
+        `${this.carro.marca} ${this.carro.modelo} foi atualizado com sucesso.`,
         'toast-success'
       );
       this.Router.navigate(['/painel/listar']);

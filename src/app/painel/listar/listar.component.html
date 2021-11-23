@@ -26,7 +26,15 @@
             <button class="btn btn-sm btn-warning me-2" routerLink="/painel/atualizar/{{carro.id}}">
               <i class="bi bi-pen-fill"></i>
             </button>
-            <button class="btn btn-sm btn-danger">
+            <button class="btn btn-sm btn-danger" [swal]="{
+             title: 'ATENÇÃO',
+             text: 'Deseja realmente excluir o carro: ' + carro.marca + ' ' + carro.modelo + '?',
+             showDenyButton: true,
+             denyButtonText: 'Não',
+             confirmButtonText: 'Sim, excluir',
+             icon: 'warning'
+            }" (confirm)="deletar(carro)"
+            >
               <i class="bi bi-trash-fill"></i>
             </button>
           </td>

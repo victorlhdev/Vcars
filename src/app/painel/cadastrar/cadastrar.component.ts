@@ -28,7 +28,7 @@ export class CadastrarComponent implements OnInit {
       this.carro = retorno;
       this.CarrosService.exibirMensagem(
         'SISTEMA',
-        `${this.carro.modelo} foi cadastrado com sucesso. ID: ${this.carro.id}`,
+        `${this.carro.marca} ${this.carro.modelo} foi cadastrado com sucesso. ID: ${this.carro.id}`,
         'toast-success'
       );
       this.Router.navigate(['/painel/listar'])

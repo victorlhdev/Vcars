@@ -22,4 +22,15 @@ export class ListarComponent implements OnInit {
       this.listaCarros = retorno;
     });
   }
+
+  deletar(carro: ICarro):void {
+    this.CarrosService.excluir(carro.id!).subscribe(() => {
+      this.CarrosService.exibirMensagem(
+        'SISTEMA',
+        `${carro.marca} ${carro.modelo} foi excluido com sucesso!`,
+        'toast-warning'
+      );
+      this.carregarCarros();
+    });
+  }
 }
