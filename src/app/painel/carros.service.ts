@@ -20,8 +20,22 @@ export class CarrosService {
     );
   }
 
+  buscarPorId(id: number): Observable<ICarro> {
+    return this.http.get<ICarro>(`${this.URL}/${id}`).pipe(
+      map((retorno) => retorno),
+      catchError((erro) => this.exibeErro(erro))
+    );
+  }
+
   cadastrar(carro: ICarro): Observable<ICarro> {
     return this.http.post<ICarro>(this.URL, carro).pipe(
+      map((retorno) => retorno),
+      catchError((erro) => this.exibeErro(erro))
+    );
+  }
+
+  atualizar(carro: ICarro): Observable<ICarro> {
+    return this.http.put<ICarro>(`${this.URL}/${carro.id}`, carro).pipe(
       map((retorno) => retorno),
       catchError((erro) => this.exibeErro(erro))
     );

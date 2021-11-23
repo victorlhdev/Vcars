@@ -10,6 +10,7 @@ import { ListarComponent } from './listar/listar.component';
 import { PainelRoutingModule } from './painel-routing.module';
 import { PainelComponent } from './painel.component';
 import { PainelheaderComponent } from './painelheader/painelheader.component';
+import { AtualizarComponent } from './atualizar/atualizar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PainelheaderComponent } from './painelheader/painelheader.component';
     CadastrarComponent,
     PainelheaderComponent,
     PainelComponent,
+    AtualizarComponent,
   ],
   imports: [
     CommonModule,

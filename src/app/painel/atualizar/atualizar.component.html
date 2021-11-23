@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="card shadow">
+    <form class="m-3">
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="marca"
+            type="text"
+            class="form-control"
+            placeholder="Marca do carro"
+            name= "marcaCarro" [(ngModel)]="carro.marca"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="modelo"
+            type="text"
+            class="form-control"
+            placeholder="Modelo do carro"
+            name= "modelo" [(ngModel)]="carro.modelo"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="versao"
+            type="text"
+            class="form-control"
+            placeholder="Versão do carro"
+            name= "versao" [(ngModel)]="carro.versao"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="ano"
+            type="number"
+            class="form-control"
+            placeholder="ano de fabricação"
+            name="ano" [(ngModel)]="carro.ano"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="km"
+            type="number"
+            class="form-control"
+            placeholder="KM rodados"
+            name="km" [(ngModel)]="carro.km"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+            for="preco"
+            type="number"
+            class="form-control"
+            placeholder="Preço do carro"
+            name="preco" [(ngModel)]="carro.preco"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-default" routerLink="/painel/listar">
+            Voltar
+          </button>
+          <button class="btn btn-warning float-end" (click)="salvarCarro()">
+            Salvar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
