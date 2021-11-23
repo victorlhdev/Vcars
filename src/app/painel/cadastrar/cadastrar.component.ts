@@ -1,33 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { CarrosService } from './../carros.service';
+import { ICarro } from './../ICarro.model';
 
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.scss']
+  styleUrls: ['./cadastrar.component.scss'],
 })
 export class CadastrarComponent implements OnInit {
-
-  marca!: string;
-  modelo!: string;
-  versao!: string;
-  ano!: number;
-  km!: number;
-  preco!: number;
-
-
-  constructor() { }
-
-  ngOnInit(): void {
+  carro: ICarro = {
+    marca: null!,
+    modelo: null!,
+    versao: null!,
+    ano: null!,
+    km: null!,
+    preco: null!,
   }
 
-  salvarCarro():void {
-    console.log('marca: ',this.marca);
-    console.log('modelo: ',this.modelo);
-    console.log('versao: ',this.versao);
-    console.log('ano: ',this.ano);
-    console.log('km: ',this.km);
-    console.log('preco: ',this.preco);
-    alert('Salvo com Sucesso!')
-  }
+  constructor(private CarrosService: CarrosService, private Router: Router) {}
 
+  ngOnInit(): void {}
+
+  salvarCarro(): void {
+    this.CarrosService.cadastrar(this.carro).subscribe(retorno => {
+      this.carro = retorno;
+      this.CarrosService.exibirMensagem(
+        'SISTEMA',
+        `${this.carro.modelo} foi cadastrado com sucesso. ID: ${this.carro.id}`,
+        'toast-success'
+      );
+      this.Router.navigate(['/painel/listar'])
+    });
+  }
 }

@@ -10,7 +10,7 @@
             type="text"
             class="form-control"
             placeholder="Marca do carro"
-            name= "marcaCarro" [(ngModel)]="marca"
+            name= "marcaCarro" [(ngModel)]="carro.marca"
             >
           </div>
         </div>
@@ -24,7 +24,7 @@
             type="text"
             class="form-control"
             placeholder="Modelo do carro"
-            name= "modelo" [(ngModel)]="modelo"
+            name= "modelo" [(ngModel)]="carro.modelo"
             >
           </div>
         </div>
@@ -38,7 +38,7 @@
             type="text"
             class="form-control"
             placeholder="Versão do carro"
-            name= "versao" [(ngModel)]="versao"
+            name= "versao" [(ngModel)]="carro.versao"
             >
           </div>
         </div>
@@ -52,7 +52,7 @@
             type="number"
             class="form-control"
             placeholder="ano de fabricação"
-            name="ano" [(ngModel)]="ano"
+            name="ano" [(ngModel)]="carro.ano"
             >
           </div>
         </div>
@@ -66,7 +66,7 @@
             type="number"
             class="form-control"
             placeholder="KM rodados"
-            name="km" [(ngModel)]="km"
+            name="km" [(ngModel)]="carro.km"
             >
           </div>
         </div>
@@ -80,7 +80,7 @@
             type="number"
             class="form-control"
             placeholder="Preço do carro"
-            name="preco" [(ngModel)]="preco"
+            name="preco" [(ngModel)]="carro.preco"
             >
           </div>
         </div>
@@ -91,7 +91,7 @@
           <button class="btn btn-default" routerLink="/painel/listar">
             Voltar
           </button>
-          <button class="btn btn-success float-end" (click)="salvarCarro">
+          <button class="btn btn-success float-end" (click)="salvarCarro()">
             Salvar
           </button>
         </div>
